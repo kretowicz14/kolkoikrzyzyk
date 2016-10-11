@@ -1,0 +1,48 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-size: 1.1em;
+    font-family: Lato, "Helvetica Neue", Arial, monospace !important;
+    font-style: normal;
+    overflow-x: hidden;
+    color: #b5b5b5;
+}
+
+.block {
+    border-radius: 5%;
+    background-color: #fafafa;
+}
+
+.noWinBlock {
+    border: solid 2px #dddddd;
+}
+
+.winBlock {
+    border: solid 2px #ee3b3b;
+}
+
+.infoBlock {
+    margin-bottom: 30px;
+}
+
+.block img {
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+/* Footer */
+.footer {
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
+
+.footer small {
+    color: #b5b5b5;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #8d8d8d;
+}
