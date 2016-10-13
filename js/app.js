@@ -11,24 +11,6 @@ angular.module('app')
     .controller('mainController', ['$scope', '$sessionStorage',
         function ($scope, $sessionStorage) {
 
-            //Start Options
-            $scope.startNewGame = function () {
-                //Create Blocks Default Value
-                $scope.blocksArray = [];
-                for (var i = 0; i < 9; i++){
-                    $scope.blocksArray.push(
-                        {
-                            'id': i,
-                            'value': null,
-                            'win': 0
-                        }
-                    );
-                }
-                $scope.activePerson = 'none';
-                $scope.selected = false;
-                $scope.info = 'Kto zaczyna grę?';
-            };
-
             //Chose person
             $scope.startPerson = function (person) {
                 $scope.info = 'Teraz kolej dla:';
@@ -81,6 +63,22 @@ angular.module('app')
                 }
             };
 
+            //Start Options
+            $scope.startNewGame = function () {
+                $scope.blocksArray = [];
+                for (var i = 0; i < 9; i++){
+                    $scope.blocksArray.push(
+                        {
+                            'id': i,
+                            'value': null,
+                            'win': 0
+                        }
+                    );
+                }
+                $scope.activePerson = 'none';
+                $scope.selected = false;
+                $scope.info = 'Kto zaczyna grę?';
+            };
 
             //Check old session exist
             if ($sessionStorage.exist == true) {
@@ -91,6 +89,7 @@ angular.module('app')
             } else {
                 $scope.startNewGame();
             }
+
 
             console.log("  _________________________\n< Chyba ca\u0142kiem dzia\u0142a :) >\n  -------------------------\n         \\   ^__^ \n          \\  (oo)\\_______\n             (__)\\       )\\/\\\n                 ||----w |\n                 ||     ||\n    ");
         }
